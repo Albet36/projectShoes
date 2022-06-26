@@ -1,0 +1,225 @@
+<div class="container-fluid pt-4 px-4">
+  <div class="row g-4">
+
+    <form action="/products" method="POST"  role="form">
+      <div class="row">
+        <div class="col-sm-12 col-xl-8">
+          <div class="bg-light rounded h-100 p-4">
+            <h6 class="mb-4">General Information</h6>
+            <div class="form-floating mb-3">
+              <input
+                type="text"
+                class="form-control"
+                id="floatingInput"
+                placeholder="name@example.com" name="idProduct"
+              />
+              <label for="floatingInput">Product Id</label>
+            </div>
+              <div class="form-floating mb-3">
+              <input
+                type="text"
+                class="form-control"
+                id="floatingInput"
+                placeholder="name@example.com" name="nameProduct"
+              />
+              <label for="floatingInput">Name</label>
+            </div>
+
+            <div class="form-floating">
+              <textarea
+                class="form-control"
+                placeholder="Leave a comment here"
+                id="floatingTextarea"
+                style="height: 150px;" name="description"
+              ></textarea>
+              <label for="floatingTextarea">Descriptions</label>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-xl-4">
+          <div class="bg-light rounded h-100 p-4">
+            <h6 class="mb-4">Organize Product</h6>
+            <div class="form-floating mb-3">
+              <select
+                name=""
+                id="input"
+                class="form-control"
+              
+              >
+                <option value=""></option>
+              </select>
+              <label for="floatingInput">Owner</label>
+
+            </div>
+
+            <div class="form-floating">
+              <select
+                name=""
+                id="input"
+                class="form-control"
+              
+              >
+                <option value=""></option>
+              </select>
+              <label for="floatingInput">Category</label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row mt-5">
+        <div class="col-sm-12 col-xl-8">
+          <div class="bg-light rounded h-100 p-4">
+            <h6 class="mb-4">Attributes</h6>
+            <div class="form-floating mb-3">
+              <input
+                type="text"
+                class="form-control"
+                id="floatingInput"
+                placeholder="name@example.com"
+                name="priceProduct"
+              />
+              <label for="floatingInput">price</label>
+            </div>
+            <label for="floatingInput mt-5">Status</label>
+            <div class="form-floating mb-3">
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="status"
+                  id="inlineRadio1"
+                  value="true"
+                />
+
+                <label
+                  class="form-check-label"
+                  for="inlineRadio1"
+                >Active</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="true"
+                  id="inlineRadio2"
+                  value="false"
+                />
+                <label class="form-check-label" for="inlineRadio3">Hide</label>
+              </div>
+            </div>
+            <div class="form-floating mb-3">
+              <input
+                type="text"
+                class="form-control"
+                id="floatingInput"
+                placeholder="name@example.com"
+                name="priceSale"
+              />
+              <label for="floatingInput">PriceSale</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input
+                type="text"
+                class="form-control"
+                id="floatingInput"
+                placeholder="name@example.com"
+                name="yearOfManufacture"
+              />
+              <label for="floatingInput">yearOfManufacture</label>
+            </div>
+                <div class="form-floating mb-3">
+              <input
+                type="text"
+                class="form-control"
+                id="floatingInput"
+                placeholder="name@example.com"
+                name="producer"
+              />
+              <label for="floatingInput">Producer</label>
+            </div>
+   </div>
+        </div>
+        <div class="col-sm-12 col-xl-4">
+          <div class="bg-light rounded h-100 p-4">
+            <h6 class="mb-4">Media</h6>
+            <div class="form-floating mb-3">
+              <select
+                name=""
+                id="input"
+                class="form-control"
+              
+              >
+                <option value=""></option>
+              </select>
+              <label for="floatingInput">Owner</label>
+
+            </div>
+
+            <div class="form-floating">
+
+              <input
+                type="text"
+                name="imagesProduct"
+                id="input"
+                class="form-control"
+                value=""
+                title=""
+              />
+
+              <label for="floatingInput">Owner</label>
+            </div>
+             <div class="form-floating">
+
+              <input
+                type="text"
+                name="images1Product"
+                id="input"
+                class="form-control"
+                value=""
+                title=""
+              />
+
+              <label for="floatingInput">Owner</label>
+            </div>
+             <div class="form-floating">
+
+              <input
+                type="text"
+                name="images2Product"
+                id="input"
+                class="form-control"
+                value=""
+                title=""
+              />
+
+              <label for="floatingInput">Owner</label>
+            </div>
+             <div class="form-floating">
+
+              <input
+                type="text"
+                name="images3Product"
+                id="input"
+                class="form-control"
+                value=""
+                title=""
+              />
+
+              <label for="floatingInput">Owner</label>
+            </div>
+            
+            
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-12 col-xl-12">
+
+        <button type="submit" class="btn btn-primary mt-5">Save</button>
+        <a href="/products" class="btn btn-default mt-5">Canel</a>
+
+      </div>
+    </form>
+
+  </div>
+</div>

@@ -1,0 +1,226 @@
+<div class="container-fluid pt-4 px-4">
+  <div class="row g-4">
+
+  <form action="/products/{{ItemProduct._id}}?_method=PUT" method="POST" role="form">
+      <div class="row">
+        <div class="col-sm-12 col-xl-8">
+          <div class="bg-light rounded h-100 p-4">
+            <h6 class="mb-4">General Information</h6>
+            <div class="form-floating mb-3">
+              <input
+                type="text"
+                class="form-control"
+                id="floatingInput"
+                placeholder="name@example.com" name="idProduct"
+                value="{{ItemProduct.idProduct}}"
+              />
+              <label for="floatingInput">Product Id</label>
+            </div>
+              <div class="form-floating mb-3">
+              <input
+                type="text"
+                class="form-control"
+                id="floatingInput"
+                placeholder="name@example.com" name="nameProduct"
+                value={{ItemProduct.nameProduct}}
+              />
+              <label for="floatingInput">Name</label>
+            </div>
+
+            <div class="form-floating">
+              <textarea
+                class="form-control"
+                placeholder="Leave a comment here"
+                id="floatingTextarea"
+                style="height: 150px;" name="description" value={{ItemProduct.description}}
+              ></textarea>
+              <label for="floatingTextarea">Descriptions</label>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-xl-4">
+          <div class="bg-light rounded h-100 p-4">
+            <h6 class="mb-4">Organize Product</h6>
+            <div class="form-floating mb-3">
+              <select
+                name=""
+                id="input"
+                class="form-control"
+              
+              >
+                <option value=""></option>
+              </select>
+              <label for="floatingInput">Owner</label>
+
+            </div>
+
+            <div class="form-floating">
+              <select
+                name=""
+                id="input"
+                class="form-control"
+              
+              >
+                <option value=""></option>
+              </select>
+              <label for="floatingInput">Category</label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row mt-5">
+        <div class="col-sm-12 col-xl-8">
+          <div class="bg-light rounded h-100 p-4">
+            <h6 class="mb-4">Attributes</h6>
+            <div class="form-floating mb-3">
+              <input
+                type="text"
+                class="form-control"
+                id="floatingInput"
+                placeholder="name@example.com"
+                name="priceProduct"
+                 value={{ItemProduct.priceProduct}}
+              />
+              <label for="floatingInput">price</label>
+            </div>
+            <label for="floatingInput mt-5">Status</label>
+            <div class="form-floating mb-3">
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input"
+                  type="text"
+                  name="status"
+                  id="inlineRadio1"
+                  value="{{ItemProduct.status}}"
+                />
+
+                <label
+                  class="form-check-label"
+                  for="inlineRadio1"
+                >Active</label>
+              </div>
+             
+            </div>
+            <div class="form-floating mb-3">
+              <input
+                type="text"
+                class="form-control"
+                id="floatingInput"
+                placeholder="name@example.com"
+                name="priceSale"
+                        value={{ItemProduct.priceSale}}
+              />
+              <label for="floatingInput">PriceSale</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input
+                type="text"
+                class="form-control"
+                id="floatingInput"
+                placeholder="name@example.com"
+                name="yearOfManufacture"
+                        value={{ItemProduct.yearOfManufacture}}
+              />
+              <label for="floatingInput">yearOfManufacture</label>
+            </div>
+                <div class="form-floating mb-3">
+              <input
+                type="text"
+                class="form-control"
+                id="floatingInput"
+                placeholder="name@example.com"
+                name="producer"
+                        value={{ItemProduct.producer}}
+              />
+              <label for="floatingInput">Producer</label>
+            </div>
+   </div>
+        </div>
+        <div class="col-sm-12 col-xl-4">
+          <div class="bg-light rounded h-100 p-4">
+            <h6 class="mb-4">Media</h6>
+            <div class="form-floating mb-3">
+              <select
+                name=""
+                id="input"
+                class="form-control"
+              
+              >
+                <option value=""></option>
+              </select>
+              <label for="floatingInput">Owner</label>
+
+            </div>
+
+            <div class="form-floating">
+
+              <input
+                type="input"
+                name="imagesProduct"
+                id="input"
+                class="form-control"
+                  value={{ItemProduct.imagesProduct}}
+              
+              />
+
+              <label for="floatingInput">Owner</label>
+            </div>
+             <div class="form-floating">
+
+              <input
+                type="input"
+                name="images1Product"
+                id="input"
+                class="form-control"
+                        value={{ItemProduct.images1Product}}
+              
+              />
+
+              <label for="floatingInput">Owner</label>
+            </div>
+             <div class="form-floating">
+
+              <input
+                type="input"
+                name="images2Product"
+                id="input"
+                class="form-control"
+                value={{ItemProduct.images2Product}}
+              
+              />
+
+              <label for="floatingInput">Owner</label>
+            </div>
+             <div class="form-floating">
+
+              <input
+                type="input"
+                name="images3Product"
+                id="input"
+                class="form-control"
+                   value={{ItemProduct.images3Product}}
+              />
+
+              <label for="floatingInput">Owner</label>
+            </div>
+             <button class="btn btn-success mt-5">Save</button>
+</form>
+            
+          </div>
+        </div>
+      </div>
+    </form>
+      <div class="col-sm-12 col-xl-12">
+
+   
+<form method="POST" action="/products/{{ItemProduct._id}}?_method=DELETE" style="display: inline-block">
+        <button class="btn btn-danger mt-5">Delete</button>
+</form>
+
+
+        <a href="/products" class="btn btn-warning mt-5">Canel</a>
+      </div>
+
+  </div>
+</div>
