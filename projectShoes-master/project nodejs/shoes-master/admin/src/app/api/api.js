@@ -9,11 +9,7 @@ function api(app) {
    app.put("/category/:id",queryApi.editCateGory);
    app.delete("/category/:id",queryApi.deleteCateGory);
    //Api Login & Register
-   app.post("/account/",queryApi.createAccount);
-   app.put("/account/:id",queryApi.editAccount);
-   app.post("/checkAcc",queryApi.checkAccount);
+//    app.put("/account/:id",queryApi.editAccount);
    app.get("/logout",queryApi.logout);
 }
 module.exports= api;
-// api sẽ 4 method cơ bản là : GET (lấy dữ liệu) ,Post(Gửi dữ liệu),PUT/id(Sửa đổi dữ liệu),DELETE/id
-// back-end : HTML,css->(responsive media),javascript

@@ -2,7 +2,7 @@ require("dotenv").config();
 const mongoose = require("mongoose");
 function Connect() {  
     try {   
-         mongoose.connect("mongodb://localhost:27017/ecomerce");  
+         mongoose.connect(process.env.CONNECT_MONGO_URI);  
          console.log("Bạn đã kết nối tới Nasa");
  } 
  catch (err) {

@@ -1,19 +1,16 @@
 const Account = require("../app/Models/Account");
 const jwt = require('jsonwebtoken');
-const bcrypt = require('bcrypt');
 function requireAuth(req, res, next) {
     if (!req.cookies.userId) {
-        res.redirect('/login');
+        res.redirect('http://localhost:2002/login');
         return;
     }
     const user = Account.findOne({ id: req.cookies.userId });
     if (!user) {
-        res.redirect('/login');
+        res.redirect('http://localhost:2002/login');
         return;
     }
     next();
-
-
 }
 const checkUser = (req, res, next) => {
     const Token = req.cookies.userId;

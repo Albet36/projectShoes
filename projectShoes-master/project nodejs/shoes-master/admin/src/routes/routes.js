@@ -1,4 +1,4 @@
-const login = require("../app/Components/login");
+
 const home = require("../app/Components/home");
 const products = require("../app/Components/products");
 const promo_code = require("../app/Components/promo_code");
@@ -10,7 +10,7 @@ const middlewareAuth = require("../middleware/Auth");
 function routes(app) {
 
   // home
-  app.get("/home",middlewareAuth.requireAuth, home.home);
+  app.get("/home", home.home);
   // users
   app.get("/users/profile",middlewareAuth.requireAuth, users.profile);
   app.get("/users/listUser",middlewareAuth.requireAuth, users.listUser);
@@ -35,7 +35,6 @@ function routes(app) {
   // error pages
   app.get("/404", notFound.notFound);
   // login
-  app.get("/login", login.login);
-  app.get("/register", login.register);
+
 }
 module.exports = routes;

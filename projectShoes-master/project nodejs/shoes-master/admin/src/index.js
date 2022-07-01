@@ -25,14 +25,6 @@ app.set("view engine", ".hbs");
 // Config method + req
 app.use(methodOverride('_method'));
 app.use(express.urlencoded({ extended: true }));
-// config passport
-app.use(session({
-    secret : process.env.JWT_ACCESS_KEY,
-    resave: false,
-    saveUninitialized: false
-}));
-app.use(passport.initialize());
-app.use(session());
 
 // Config scoure
 app.set("views", path.join(__dirname, "Resources\\views"));
@@ -43,9 +35,9 @@ app.use("*/lib", express.static(path.join(__dirname, "public/lib")));
 // Config routes
 db.connect();
 app.get('*',checkUser);
-routes(app);
 // api
 api(app);
+routes(app);
 app.use((req,res,next) => {
     res.status(404).redirect('/404')
 });
