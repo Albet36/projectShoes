@@ -10,6 +10,7 @@ function api(app) {
    app.delete("/category/:id",queryApi.deleteCateGory);
    //Api Login & Register
 //    app.put("/account/:id",queryApi.editAccount);
+app.put("/account/:id",queryApi.editAccount);
    app.get("/logout",queryApi.logout);
 }
 module.exports= api;

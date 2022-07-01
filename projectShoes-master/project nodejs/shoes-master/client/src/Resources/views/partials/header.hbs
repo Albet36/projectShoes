@@ -9,7 +9,12 @@
             <li><a href="cart.html"><i class="fa fa-user"></i> My Cart</a></li>
             <li><a href="checkout.html"><i class="fa fa-user"></i>
                 Checkout</a></li>
-            <li><a href="#"><i class="fa fa-user"></i> Login</a></li>
+         {{#if user}}
+            <li><a href=""><i class="fa fa-user"></i> Hello : {{user.name}}</a></li>
+              <li><a href="/logout"><i class="fa fa-user"></i>logout</a></li>
+            {{else}}
+               <li><a href="/login"><i class="fa fa-user"></i> Login</a></li>
+               {{/if}}
           </ul>
         </div>
       </div>

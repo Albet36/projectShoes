@@ -10,7 +10,7 @@ const middlewareAuth = require("../middleware/Auth");
 function routes(app) {
 
   // home
-  app.get("/home", home.home);
+  app.get("/home",middlewareAuth.requireAuth, home.home);
   // users
   app.get("/users/profile",middlewareAuth.requireAuth, users.profile);
   app.get("/users/listUser",middlewareAuth.requireAuth, users.listUser);

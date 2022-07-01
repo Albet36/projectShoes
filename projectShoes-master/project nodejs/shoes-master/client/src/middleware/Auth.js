@@ -1,19 +1,6 @@
 const Account = require("../models/Account");
 const jwt = require('jsonwebtoken');
-function requireAuth(req, res, next) {
-    if (!req.cookies.userId) {
-        res.redirect('/login');
-        return;
-    }
-    const user = Account.findOne({ id: req.cookies.userId });
-    if (!user) {
-        res.redirect('/login');
-        return;
-    }
-    next();
 
-
-}
 const checkUser = (req, res, next) => {
     const Token = req.cookies.userId;
     if (Token) {
@@ -35,4 +22,4 @@ const checkUser = (req, res, next) => {
         next();
     }
 }
-module.exports = { requireAuth, checkUser }
+module.exports = { checkUser }
