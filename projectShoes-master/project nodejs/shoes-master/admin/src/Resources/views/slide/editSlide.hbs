@@ -1,0 +1,40 @@
+<div class="container-fluid pt-4 px-4">
+  <div class="row g-4">
+
+    <form action="/category/{{resultCategory._id}}?_method=PUT" method="POST" role="form">
+      <div class="row">
+        <div class="col-sm-12 col-xl-8">
+          <div class="bg-light rounded h-100 p-4">
+            <h6 class="mb-4">Edit Category</h6>
+            <div class="form-floating mb-3">
+              <input
+                type="text"
+                class="form-control"
+                name="name"
+                id="floatingInput"
+                value="{{resultCategory.name}}"
+              />
+              <label for="floatingInput">Name</label>
+            </div>
+
+       
+          </div>
+        </div>
+       
+      </div>
+
+    
+      <div class="col-sm-12 col-xl-12 mt-5">
+
+   
+  <button class="btn btn-success"  type="submit">Save</button>
+  </form>
+<form  style="display: inline-block" method="POST" action="/category/{{resultCategory._id}}?_method=DELETE">
+  <button  class="btn btn-danger" type="submit">Delete</button>
+</form>
+     <a class="btn btn-primary" href="/category">Canel</a>
+      </div>
+  
+
+  </div>
+</div>

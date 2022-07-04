@@ -7,6 +7,7 @@ const users = require("../app/Components/users");
 const category = require("../app/Components/category");
 const notFound = require("../app/Components/notFound");
 const middlewareAuth = require("../middleware/Auth");
+const slide = require("../app/Components/slide");
 function routes(app) {
 
   // home
@@ -31,7 +32,8 @@ function routes(app) {
   app.get("/order",middlewareAuth.requireAuth, sale.order);
   // Paid_Orders
   app.get("/orders/Paid_Orders",middlewareAuth.requireAuth, sale.Paid_Orders);
-  // Date Amendirment
+  // Slide
+  app.get("/slide",middlewareAuth.requireAuth,slide.listSlide);
   // error pages
   app.get("/404", notFound.notFound);
   // login
